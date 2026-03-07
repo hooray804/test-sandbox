@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dcinside Expert Extension
 // @namespace    https://github.com/hooray804/adguard-gallery-filter
-// @version      1.7.0
+// @version      2.0.0
 // @description  [디시인사이드 모바일 전용] 무한 스크롤, 이미지 미리보기, 비추천수 로드, 유저 메모, 본문 미리보기 등의 기능을 추가합니다.
 // @author       hooray804 and Gemini
 // @match        https://m.dcinside.com/board/*
@@ -18,8 +18,8 @@
 // @license      Apache-2.0
 // @homepage     https://github.com/hooray804/adguard-gallery-filter
 // @supportURL   https://github.com/hooray804/adguard-gallery-filter/issues
-// @downloadURL  https://raw.githubusercontent.com/hooray804/adguard-gallery-filter/refs/heads/main/dc.user.js
-// @updateURL    https://raw.githubusercontent.com/hooray804/adguard-gallery-filter/refs/heads/main/dc.user.js
+// @downloadURL  https://raw.githubusercontent.com/hooray804/test-sandbox/refs/heads/main/dc_script.user.js
+// @updateURL    https://raw.githubusercontent.com/hooray804/test-sandbox/refs/heads/main/dc_script.user.js
 // ==/UserScript==
 
 (async function() {
@@ -379,12 +379,12 @@
         });
     };
 
-    const processInBatches = async (items, batchSize = 3) => {
+    const processInBatches = async (items, batchSize = 4) => {
         for (let i = 0; i < items.length; i += batchSize) {
             const batch = Array.from(items).slice(i, i + batchSize);
             await Promise.all(batch.map(item => processListItem(item)));
             if (i + batchSize < items.length && !settings.disableFetch) {
-                await new Promise(resolve => setTimeout(resolve, 50));
+                await new Promise(resolve => setTimeout(resolve, 100));
             }
         }
     };
