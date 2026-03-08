@@ -1,0 +1,230 @@
+! Title: 애드가드 갤러리 필터
+! Version: 2026.03.08
+! Description: AdGuard, uBlock Origin, Unicorn Pro, Brave의 오차단 및 남은 광고와 안티 애드블록을 해결하는 실전압축 필터입니다.
+! Homepage: https://m.dcinside.com/gallog/cent8649
+
+! Ads
+##.ad-view
+##.banner_m
+##.coupang-box
+##.happy-under-player-mobile
+##.textwidget
+##[alt$='광고']
+##[class*='ad'][id^='AD']:not([class*='address'])
+##[class^='basic-banner'][id]
+##[class^='happy-header']
+##[id^='AD'][style]
+##[id^='hd_pop']
+##iframe[src*='digitalcamp.co.kr']
+##iframe[src*='targetpush.co.kr']
+*##[target='_blank']:has([src*='/banner/'])
+*tcid=$all
+[$domain=/^hoohootv[0-9]*\.[a-z]{2,}/]###img_row_container
+[$domain=/^tvmon[0-9]*\.[a-z]{2,}/]##.banner_wrap2
+[$domain=/^tvwiki[0-9]*\.net/]###bannerList, #viewCover
+[$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##[href*='/ad'][target='_blank']:has(img)
+[$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##div[class$='gallery'][id] [target='_blank']:upward(1)
+algumon.com##div.card.bg-base-100.rounded-none:has(> div > div > ins.adsbygoogle)
+auction.co.kr,gmarket.co.kr##.plcc_banner
+avdbs.com##.ad-btn[class*='tp']
+avsee.ru##.at-main > div.main-box > .miso-post-mix .post-wrap
+avsee.ru##.at-side div.main-box:first-child
+avsee.ru##.title div[style^='width:100%']
+avsee.ru##.widget-side-box div.main-box:first-child
+avsee.ru##[alt$='gif']
+bbs.ruliweb.com##div.clear:has([style*='overflow-x'])
+bbs.ruliweb.com##tr:has(.nick[style^='display: inline-block'])
+blog.naver.com,comic.naver.com##[class*='banner_area']
+booktoki469.com,booktoki470.com##.col-sm-9.col-md-9.col-15
+booktoki469.com,booktoki470.com,manatoki469.net,manatoki470.net,newtoki469.com,newtoki470.com##[style='margin-bottom: 20px;'].row.row-15
+booktoki469.com,booktoki470.com,manatoki469.net,manatoki470.net,newtoki469.com,newtoki470.com##li:has([target]:not([href*=bbs]))
+chimhaha.net##[id^='slot']
+chimhaha.net##div[style='margin-top: 50px; ']
+chimhaha.net,seoul.co.kr,mule.co.kr##[class*='Ad']
+damoang.net##.gap-1.flex-col.flex
+danawa.com,m.cafe.naver.com##[class^='banner']
+dcinside.com###moveOverlay, #gaejukimg
+dcinside.com##li[id^='comment_']:has(p[class*='txt']:has-text(/^(https?:\/\/)[A-Za-z0-9]{2,10}(\.[a-z]{2,7}|\.co\.kr)(\/(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9_]{5,9})$/):not(:has-text(/git|g2sh|img|tebin|sendanywhe|twitter|rentry|x\.com|youtu|ibb\.co|archive\.md|t\.me|streamable|dev/i))):style(opacity: 0.1 !important;)
+dvdprime.com##[id$='top_banner']
+dvdprime.com##[id^='ad_mobile']
+etoland.co.kr##[id*='underGoodBtn']
+etoland.co.kr,ppomppu.co.kr,m.ppomppu1.co.kr##[id$='_popup']
+fc-info.com##div[class^='Venatus_']
+fmkorea.com##[class$='_ad']
+gmarket.co.kr##.js-impressionable.box__head-ad
+harpi.in##div:has(> script[src])
+hygall.com##div[style='display: flex;justify-content: center; width:100%;height:100px;']
+instiz.net##.view_top
+instiz.net##div[class^='hot_u']
+instiz.net##div[style*='min-height:250px;']
+inven.co.kr,mt.co.kr##[class$='ads']
+inven.co.kr,wowtv.co.kr,damoang.net##[class*='-banner']
+k-hentai.org##.my-3.container
+kone.gg##.flex.justify-center.py-3
+m.bobaedream.co.kr##div[style$='height:50px;']
+m.cafe.daum.net##[class*='_banner']
+m.cafe.naver.com###articleFeedList
+m.cafe.naver.com##.CardWrap.home_popular_articles
+m.cafe.naver.com##.HomeFeedItem
+m.danawa.com###mdnw-main-dimm, #mdnw-main-bottomSheet-container
+m.daum.net###trendKeywordsContainer
+m.dcinside.com###notice_list > li
+m.dcinside.com##.layer-bottom-popup
+m.dcinside.com##.view-btm-con
+m.dcinside.com#$##notice_list > li:has(.ct):not(:has(.ntc-line-pink.round)) { display: table !important; }
+m.fmkorea.com##script ~ div.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):matches-css(padding: /[0-5]px/):remove()
+m.fmkorea.com##section.fmWidgetStyle2019.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):matches-css(padding: /[0-5]px/):remove()
+m.naver.com##.chf_feed_wrap > .type_square.cc_clip_list
+m.naver.com##script#MM_search_disaster ~*
+m.ppomppu.co.kr##div[style^='text-align:center;']
+m.ruliweb.com##tr:has(.nbp_container)
+m.wowtv.co.kr##.container > div[style]
+m.wowtv.co.kr,inven.co.kr##[id*='Banner']
+maplescouter.com,loawa.com###popup
+mlbpark.donga.com##[class^='coupang'], [class*='naver_place']
+mlbpark.donga.com##ul.sub_lists_today.lists > li.items:nth-of-type(6)::before
+mlbpark.donga.com$$li:has-text(/엠팍제휴팀|폰판기/)
+mule.co.kr##[class*='-ad-']
+namu.wiki#$#div[class][id]:empty { display: none !important; }
+namu.wiki#$#div[class][id]:has(> iframe[id*='google_ads_iframe_']) { display: none !important; }
+naver.com###sb-kh-shortents-wrap
+nexon.com,gg,ps,xyz,loawa.com,or.kr,go.kr#@#[target='_blank']:has([src*='/banner/'])
+pay.naver.com##div[class^='BottomAds_article']
+ppomppu.co.kr##.bottom > div[style]
+ppomppu.co.kr$$tr:has-text(AD)
+rgr.kr,rgrong.net,te31.com###foot:style(height: 150px !important;)
+rgr.kr,rgrong.net,te31.com##div[style='position:relative;z-index:11;']
+ruliweb.com,ppomppu.co.kr,naver.com,daum.net,etoland.co.kr##[id$='_ad']
+search.danawa.com##[id^='powerShoppingArea']
+search.danawa.com##li[data-itemtype='adsmart']
+section.blog.naver.com##.area_advertisement
+seoul.co.kr###bottomScrollBox
+seoul.co.kr##[class^='ad']
+soccerline.kr##.bottBann
+svrforum.com$$ins[class="adsbygoogle"]
+talk.op.gg##+js(set-cookie, _talkg_banner, 1)
+te31.com##table:has(td > script)
+teamblind.com##.coupang_gnb
+teamblind.com##[href^='https://link.coupang.com/re/AFFSDP']
+teamblind.com##div.article-list-pre:has([href^='https://link.coupang.com/re/AFFSDP'])
+teamblind.com##div.article:has(> [href^='https://link.coupang.com/re/AFFSDP'])
+teamblind.com##div.comment_area.wrap-comment[style='cursor: pointer;']
+torrentpi150.com##.h20 +.widget-box
+torrentpi150.com##div.col-sm-12 > .widget-box > .basic-post-gallery
+windowsforum.kr,seoul.co.kr,xportsnews.com##.ad
+wowtv.co.kr,cafe.naver.com##[class*='Banner']
+xportsnews.com$$div[class="ad mobile"]
+||get*ads-*-du.a.run.app^
+||ader.naver.com/*?c=m_$all
+||dvdprime.com/file/*/banner
+||clink.kakao.com/sp/$all,reason=수익링크
+||kamp.kakao.com^$app=com.kakao.talk
+||link.coupang.com/re/AFFHOME?lptag=*&amp;subid=pointlink$all,reason=펨코수익링크
+||shortformstats.kakao.com^$app=com.kakao.talk
+||t*kor*.com/images/
+||thumb.kakaocdn.net^$app=com.kakao.talk
+||trillion.toss.im^
+!
+!#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
+###img_row_container
+###viewCover
+##.banner_wrap2
+!#endif
+
+! Minor distractions
+arca.live##.d-lg-none.topbar-area
+damoang.net##.mb-6 ~.mb-4
+gall.dcinside.com##.dc_all
+gall.dcinside.com##.dcmedia.content_box
+gall.dcinside.com##.r_dcmedia
+gall.dcinside.com##tr[class='ub-content ']
+inven.co.kr##.inven-float-alarm
+m.cafe.naver.com##.FloatingJoinButton
+m.cafe.naver.com##.join_layer_wrap
+m.cafe.naver.com##.popular_toast_popup
+m.cafe.naver.com##.subscribe_layer_wrap
+m.dcinside.com##.outside-search-box
+m.dcinside.com##section.grid > .md-tit-box:has-text(Daum)
+mlbpark.donga.com##.the_hottest
+namu.wiki##li:has(time):not(:has([href*='/raw/'])):upward(2)
+quasarzone.com##.best-official-news, .new-official-news, .best-official-news-container, .new-official-news-container, .new-partner-saleinfo-container
+search.dcinside.com##.right_content
+
+! Annoyances
+cafe.naver.com##+js(remove-class, disable-select, #ct)
+fmkorea.com##+js(set, link_url, '')
+manatoki469.net,manatoki470.net,newtoki469.com,newtoki470.com##+js(acis, oncontextmenu)
+namu.wiki##div[class]:matches-css(position: sticky)
+||arca.live/static/assets/js/adult.min.js
+
+! Anti-adblock
+@@||piku.co.kr^$generichide
+aagag.com#$#.la { position: absolute !important; left: -3000px !important; width: 60px !important; height: 20px !important; }
+algumon.com##+js(nostif, blocked, 1500)
+kissjav.*###guard-overlay:remove()
+kissjav.*##+js(rmnt, script, /contextmenu|ghost|localStorage|video\-ad\-overlay/i)
+m.fmkorea.com##+js(set, _make_power_link_identifier, noopFunc)
+||maxmovie.com/_next/static/chunks/framework.aa400efa16f23e2b0cfe.js
+
+! Incorrect blocking
+$@$link[rel="manifest"]
+@@||192.168.$stealth=dpi
+@@||a*.smlog.co.kr^$app=com.nhn.android.search
+@@||ad-creative.pstatic.net^$app=com.nhn.android.search
+@@||ad-img.gmarket.com^$image,domain=m.gmarket.co.kr|auction.co.kr|www.gmarket.co.kr
+@@||adtouch.*
+@@||blog.kakaocdn.net*/img.gif
+@@||code-pia.com^$stealth=dpi
+@@||fs2.joycity.com^$stealth=dpi
+@@||glonmall.com^$stealth=dpi
+@@||hanaroetf.com^$stealth=dpi
+@@||isplus.$stealth=dpi
+@@||kamp.daum.net^$xhr
+@@||kr^$stealth=dpi
+@@||pincrux.com^$stealth=dpi
+@@||searchad-phinf.pstatic.net^$app=com.nhn.android.search
+@@||shopping.naver.com^$stealth
+@@||slrclub.com/rss/today_photo.slr
+@@||smartstore.naver.com^$stealth
+@@||sofrano.com^$stealth=dpi
+@@||termeden.com^$stealth=dpi
+@@||tivan.naver.com^$app=com.nhn.android.search
+@@||wcs.naver.net^$domain=seorinexpress.com|naver.com
+etoland.co.kr#$#div.hit_latest_ad { display: grid !important; }
+m.fmkorea.com#@$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
+m.gmarket.co.kr#@#.ReactVirtualized__Grid__innerScrollContainer .box__banner-wrap > .box__banner--today
+m.gmarket.co.kr#@#.js-impressionable
+meeco.kr#@##cCon + aside.sidebar2
+mlbpark.donga.com#@#div[class*="_ad"]
+mlbpark.donga.com#@$#div[id^="SmartPhone_"][id$="_today"] .lists > li::before { padding-top: 0px !important; border-bottom: none !important; }
+mule.co.kr#@#.ad-mobile
+www.gmarket.co.kr#@#.section__main-inner > .box__promotion .box__item > *
+||api-ao.adison.co^$badfilter
+||api.mumuglobal.com^$badfilter
+||app.appsflyer.com^$badfilter
+||dadispapi.gmarket.co.kr^$badfilter
+||photo.jtbc.co.kr/news/cms/etc/$badfilter
+||ssl.pstatic.net/t.static.blog/nmobile/versioning//common/lib/ntm/ntm-blog-web-*.js$badfilter
+||store-api.mumuglobal.com^$badfilter
+||tnkfactory.com^$badfilter
+
+! Google Spam Links
+www.google.*##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*="qvkjum.art"], a[href*="qjoiyh.auction"], a[href*="uai.auction"], a[href*="jvyngo.autos"], a[href*="lhfgni.autos"], a[href*="omekin.autos"], a[href*="beodhm.bar"], a[href*="wdtixy.bar"], a[href*="bitaineboulangerie.be"], a[href*="blogtopia.be"], a[href*="chirobart.be"], a[href*="clublescerises.be"], a[href*="lacasablanca.be"], a[href*="obekin.be"], a[href*="raamwebshop.be"], a[href*="thima.be"], a[href*="gkpccq.beauty"], a[href*="hosbwq.beauty"], a[href*="inthegroove.blog"], a[href*="topuniversities.blog"], a[href*="trending360.blog"], a[href*="eincsx.boats"], a[href*="gtbzno.bond"], a[href*="hiddenpleasurecity.bond"], a[href*="ljjyyp.bond"], a[href*="furmxd.cafe"], a[href*="azneen.cc"], a[href*="ofkvuv.cc"], a[href*="hswpka.cfd"], a[href*="sgttuy.cfd"], a[href*="woreft.cfd"], a[href*="hyjagc.click"], a[href*="tdprby.click"], a[href*="agpbgv.cloud"], a[href*="kkwwev.cloud"], a[href*="lmxubn.cloud"], a[href*="lnezil.cloud"], a[href*="watchfreejavonline.co"], a[href*="tjdhmq.codes"], a[href*="yigcbx.codes"], a[href*="garagepierreperreault.com"], a[href*="ginegar.com"], a[href*="hudsontrainingcenter.com"], a[href*="karunalayamattingal.com"], a[href*="marchesandagadrummond.com"], a[href*="passionitgroup.com"], a[href*="zigcou.com"], a[href*="uahxxl.company"], a[href*="vuzhnj.company"], a[href*="fhetwz.courses"], a[href*="pyymdm.courses"], a[href*="xiploh.courses"], a[href*="scouxp.cyou"], a[href*="svydoh.cyou"], a[href*="xdbthq.date"], a[href*="anikahansen.de"], a[href*="artbilu.de"], a[href*="bauformeln.de"], a[href*="bauprojekt-beratung-boldt.de"], a[href*="buchert.de"], a[href*="buerotechnik-bodensee-shop.de"], a[href*="coellnerstuben.de"], a[href*="denaver.de"], a[href*="dg-medicare.de"], a[href*="die-kpis.de"], a[href*="dr-ackermann-ludwigshafen.de"], a[href*="easyholdpro.de"], a[href*="em-neustadt.de"], a[href*="familie-sixel.de"], a[href*="firmendatenbanken.de"], a[href*="franchise-business-rawu.de"], a[href*="fugen-service-holzner.de"], a[href*="innovative-instruments.de"], a[href*="isw-maschinenbau.de"], a[href*="it108.de"], a[href*="kbl-oh.de"], a[href*="lonelywolfacademy.de"], a[href*="mattsunity.de"], a[href*="muenchener-glasbau.de"], a[href*="schadex24.de"], a[href*="schluesseldienst-weinstadt-schlosser.de"], a[href*="schwarzweisssauerland.de"], a[href*="si-sicherheit.de"], a[href*="siebdruck-ad.de"], a[href*="sitek-fenster-hoexter.de"], a[href*="studiodito.de"], a[href*="tobias-aschwer.de"], a[href*="top50-solar.de"], a[href*="venusvenus.de"], a[href*="warzone-events.de"], a[href*="weru-obfelden.de"], a[href*="qwcwbp.delivery"], a[href*="odxryw.digital"], a[href*="ryxzbz.digital"], a[href*="ydvpcc.directory"], a[href*="antoniopenalver.eu"], a[href*="beautyserwis.eu"], a[href*="borderlessbeauty.eu"], a[href*="crepiere-comparatif.eu"], a[href*="culture-echecs.eu"], a[href*="gutgas.eu"], a[href*="lagoiseotrasportoebiketour.eu"], a[href*="picture-it.eu"], a[href*="pijaca.eu"], a[href*="pp-stavebni.eu"], a[href*="regionalninoviny.eu"], a[href*="rumexbaltics.eu"], a[href*="tacosta.eu"], a[href*="voicesofthelaw.eu"], a[href*="filgex.guru"], a[href*="mvjfmi.guru"], a[href*="suxzxe.guru"], a[href*="uqwzvz.guru"], a[href*="cyreec.homes"], a[href*="edzusp.homes"], a[href*="fjsugq.horse"], a[href*="gakhcf.horse"], a[href*="rammses.it"], a[href*="asano400.jp"], a[href*="moreliving.co.jp"], a[href*="e-click.jp"], a[href*="hbcm.jp"], a[href*="maruinto-nagainto.jp"], a[href*="mcrane.jp"], a[href*="medicalenglish.jp"], a[href*="shabuchin-namba.jp"], a[href*="tacosta.jp"], a[href*="awesomek.co.kr"], a[href*="foke.co.kr"], a[href*="foodtruckhouse.co.kr"], a[href*="grentech.co.kr"], a[href*="k-visaplus.co.kr"], a[href*="keepu.co.kr"], a[href*="yagu1004.co.kr"], a[href*="yanghan.co.kr"], a[href*="darosan.kr"], a[href*="todaytopic.kr"], a[href*="csfwhb.lat"], a[href*="cjealw.life"], a[href*="dmwyzo.life"], a[href*="cxkdvs.link"], a[href*="jissey1.link"], a[href*="mvomag.lol"], a[href*="fvcjvi.makeup"], a[href*="jeutbb.makeup"], a[href*="avsnnv.media"], a[href*="wcmosm.media"], a[href*="yegazk.media"], a[href*="lorhpi.monster"], a[href*="xfdayd.monster"], a[href*="hsnnup.network"], a[href*="ozisbj.network"], a[href*="voetselvoetreflextherapie.nl"], a[href*="mhnxec.onl"], a[href*="nkwrah.onl"], a[href*="nsuzkj.onl"], a[href*="cgrvre.online"], a[href*="casaricci.org"], a[href*="expmgc.pics"], a[href*="shogakukan.edu.pl"], a[href*="zjeogv.press"], a[href*="delicatum.pt"], a[href*="fatum.pt"], a[href*="loja33.pt"], a[href*="wyuugm.qpon"], a[href*="nrelpj.rip"], a[href*="domupn.ru"], a[href*="fashiontime.ru"], a[href*="koni-store.ru"], a[href*="lublin-tver.ru"], a[href*="souzveche.ru"], a[href*="sovermed.ru"], a[href*="stroyip.ru"], a[href*="tltsu.ru"], a[href*="ovpnvg.sbs"], a[href*="ozhjoj.sbs"], a[href*="ojiykt.shop"], a[href*="ygtdwp.shop"], a[href*="letovanje-lombar.si"], a[href*="cypmwp.singles"], a[href*="zxczwm.singles"], a[href*="gbjrbn.social"], a[href*="skqyyv.social"], a[href*="cqsngq.stream"], a[href*="hysajf.stream"], a[href*="jnfyca.study"], a[href*="pseicb.study"], a[href*="168web.com.tw"], a[href*="4sifang.com.tw"], a[href*="8-hi.com.tw"], a[href*="boomtech.com.tw"], a[href*="isinon.com.tw"], a[href*="maluyi.com.tw"], a[href*="mannadorayaki.com.tw"], a[href*="medicode.com.tw"], a[href*="vvvshop.com.tw"], a[href*="cookfun.tw"], a[href*="tatcs.org.tw"], a[href*="pigdogmonkey.tw"], a[href*="smartlaw.tw"], a[href*="aimejm.video"], a[href*="gylwpa.video"], a[href*="lzezbt.video"], a[href*="vqvmdw.video"], a[href*="kvssso.vu"], a[href*="vjyotq.vu"], a[href*="wguaxj.watch"], a[href*="wtvpwc.watch"], a[href*="rubosc.work"], a[href*="axgtyj.works"], a[href*="enulzj.works"], a[href*="zdqjec.wtf"], a[href*="mduoln.yachts"], a[href*="xmynpp.yachts"])
+www.google.*##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*=".hu/"])
+www.google.*##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*=".fr/"])
+! If you use fr (or hu) TLD website then add www.google.*#@#.MjjYud:not(:has([data-id="mosaic"])):has(a[href*=".fr/"])
+
+! Etc
+dmm.co.jp#%#//scriptlet('trusted-set-cookie-reload', 'ckcy_remedied_check', 'ec_mrnhbtk', '1year', '/', '.dmm.co.jp')
+gall.dcinside.com##div.img_area button.btn:style(opacity: 0.4 !important;)
+gall.dcinside.com#$#.btn_imgcmtopen { opacity: 0.4 !important; transform: translate(8px, 7px) !important; }
+gall.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview_head:has(em.icon_write_app) > div.gall_writer > div.fl', 'span', 'alt="imgtoggle"', 'ㅤAPP')
+gall.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview_head:has(em.icon_write_mbl) > div.gall_writer > div.fl', 'span', 'alt="imgtoggle"', 'ㅤMOBILE')
+gall.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview_head:not(:has(em.icon_write_mbl)):not(:has(em.icon_write_app)) > div.gall_writer > div.fl', 'span', 'alt="imgtoggle"', 'ㅤPC')
+m.dcinside.com#$#button.btn-imgcomment { transform: scale(0.7) translate(20px, 15px) !important; opacity: 0.6 !important; }
+m.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview-tit-box:has(span.sp-app) > div > ul.ginfo2', 'li', 'alt="imgtoggle"', 'APP')
+m.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview-tit-box:has(span.sp-mweb) > div > ul.ginfo2', 'li', 'alt="imgtoggle"', 'MOBILE')
+m.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview-tit-box:not(:has(span.sp-icon)) > div > ul.ginfo2', 'li', 'alt="imgtoggle"', 'PC')
+dcinside.com#%#(function(){'use strict';const u=location.href,h=location.hostname;let dcbest=!1;if(h==='m.dcinside.com'){const m=u.match(/^https:\/\/m\.dcinside\.com\/(board|mini|person)\/([^\/]+)\/\d+/);dcbest=!!(m&&m[2]==='dcbest');}else if(h==='gall.dcinside.com'){const p=new URLSearchParams(location.search);dcbest=p.get('id')==='dcbest'&&p.has('no');}else return;let s;if(h==='gall.dcinside.com')s='button.img_comment_toggle,.btn_imgcmtopen,.img_comment';else if(h==='m.dcinside.com')s='button.btn-imgcomment,.img-comment';else return;const e=document.createElement('style');e.textContent=`${s}{display:none!important;}`;if(!dcbest)document.head.appendChild(e);document.addEventListener('DOMContentLoaded',()=>{const t=document.querySelector('[alt="imgtoggle"]');if(t)t.style.cursor='pointer',t.addEventListener('click',()=>{e.disabled=!e.disabled;if(!e.parentNode&&!e.disabled)document.head.appendChild(e);});});})();
+m.youtube.com#%#setInterval(function(){var ts=document.querySelectorAll(".slim-owner-subscribe-button");for(var i=0;i<ts.length;i++){var t=ts[i];if(t.offsetParent!==null&&!t.parentElement.querySelector(".pip-btn")){var b=document.createElement("div");b.className="pip-btn";b.innerText="PiP";b.tabIndex=0;b.style.cssText="display:flex;align-items:center;justify-content:center;background-color:#f2f2f2;border-radius:18px;height:36px;padding:0 16px;margin-right:8px;font-family:Roboto,Arial,sans-serif;font-size:14px;font-weight:500;color:#0f0f0f;cursor:pointer;outline:none;user-select:none;transition:background-color 0.2s";b.onmouseover=function(){this.style.backgroundColor="#e5e5e5"};b.onmouseout=function(){this.style.backgroundColor="#f2f2f2"};b.onclick=function(e){e.preventDefault();e.stopPropagation();var v=document.querySelector("video");if(v){v.removeAttribute("disablepictureinpicture");document.pictureInPictureElement?document.exitPictureInPicture():v.requestPictureInPicture()}};b.onfocus=b.onmouseenter=function(){if(window._pipT)return;window._pipT=1;var p=document.createElement("div");p.innerText="By Gallery Filter";p.style.cssText="position:fixed;z-index:9999;padding:4px 8px;background:rgba(255,255,255,0.8);border:1px solid rgba(0,0,0,0.2);border-radius:4px;box-shadow:0 2px 5px rgba(0,0,0,0.1);backdrop-filter:blur(3px);font-size:11px;font-family:sans-serif;color:black;pointer-events:none;opacity:1;transition:opacity 0.5s ease-out;";var r=this.getBoundingClientRect();p.style.top=(r.top-30)+"px";p.style.left=(r.left+r.width/2)+"px";p.style.transform="translateX(-50%)";document.body.appendChild(p);setTimeout(function(){p.style.opacity="0";setTimeout(function(){p.remove()},500)},1500)};t.parentElement.insertBefore(b,t)}}},1000);
+!  =============== END (Maginot Line) =============== !
